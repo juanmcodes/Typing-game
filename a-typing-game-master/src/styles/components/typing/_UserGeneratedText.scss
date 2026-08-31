@@ -1,0 +1,114 @@
+@import '../../utils/mixins';
+
+.user-text{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .drag-text-cont{
+        height: 100%;
+
+        .drag-text{
+            font-family: 'Ubuntu Mono', monospace;
+            font-size: 1.7rem;
+            display: flex;
+            justify-content: center;
+            resize: none;
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            cursor: default;        
+    
+            &:focus{
+                border: none;
+                outline: none;
+            }
+
+            @include for-small-laptop{
+                padding: 0 50px 0 60px;
+            }
+    
+            &::-webkit-scrollbar{
+                width: 8px;
+            }
+    
+            &::-webkit-scrollbar-track{
+                background-color: var(--scrollbar-track, #f1f1f1);
+                border-radius: 10px;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background: var(--scrollbar-thumb, #888);
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .start{
+        position: absolute;
+        top: 90%;
+        left: 85%;
+        border: none;
+        font-family: 'Poppins';
+        padding: 6px 12px;
+        border-radius: 25px;
+        opacity: 0.3;
+        transition: ease-in-out 0.25s;        
+
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        @include for-small-laptop {
+            left: 82%;
+        }
+    }
+
+    .text-to-compare{
+        font-size: 1.7rem;
+        white-space: pre-wrap;
+        max-height: 185px;
+        contain: content;
+        overflow: hidden;
+        position: relative;
+
+        @include for-small-laptop {
+            max-height: 170px;
+            padding: 0 50px 0 60px;
+        }
+
+        @include for-medium-laptop {
+            max-height: 195px;
+        }
+
+        @include for-large-laptop {
+            max-height: 285px;
+        }
+
+        @include for-desktop {
+            max-height: 285px;
+        }   
+
+        @include for-large-desktop {
+            max-height: 285px;
+        }   
+
+    }
+
+    .correct{
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+    }
+
+    .incorrect{
+        color: $error-color;
+        transition: color 0.2s ease;
+    }
+
+    .current {
+        text-decoration: underline;
+        transition: text-decoration 0.2s ease;
+    }
+}

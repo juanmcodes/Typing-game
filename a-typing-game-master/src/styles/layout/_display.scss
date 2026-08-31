@@ -1,0 +1,76 @@
+@import '../utils/mixins';
+@import '../utils/functions';
+
+.app{
+    height: 100vh;
+    width: 100vw;
+    padding: 20px 80px 25px 80px;
+
+    .display{
+        height: 100%;
+        display: grid;
+        grid-template-rows: 10% 85%;
+        row-gap: 30px;
+    
+        .top-row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+
+            .icon-section{
+                display: flex;
+                flex-direction: row;
+                column-gap: 5px;
+            }
+        }
+    
+        .bot-row{
+            display: grid;
+            grid-template-columns: 20% 750px 20%;
+            column-gap: 10px;
+            justify-content: center;
+
+            @include for-small-laptop {
+                grid-template-columns: 100%;
+            }
+
+            .left-column{
+                height: 100%;
+                width: 100%;
+            }
+
+            .center-column{
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                row-gap: 10px;
+
+                .display-text-display{
+                    width: 750px;
+                    max-height: 100%;
+                    padding: 20px 35px 15px 35px;
+                    font-family: 'Ubuntu Mono', monospace;
+                    font-size: 1.8rem;
+
+                    @include for-small-laptop {
+                        width: 100%;
+                    }
+
+                    @include for-medium-laptop {
+                        width: 100%;
+                    }
+                }
+
+                .display-input-box{
+                    display: flex;
+                    align-items: flex-start;
+                }
+            }
+
+            .right-column{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

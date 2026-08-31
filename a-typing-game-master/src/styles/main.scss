@@ -1,0 +1,44 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+// Base
+@import './base/reset';
+@import './base/typography';
+
+// Components
+@import './components/InputBox';
+@import './components/StatsPanel';
+@import './components/Summary';
+@import './components/TextDisplay';
+@import './components/MobileMessage';
+
+// Keyboard
+@import './components/keyboard/keyboard';
+@import './components/keyboard/key';
+
+// Typing
+@import './components/typing/AutoGenerateText';
+@import './components/typing/UserGeneratedText';
+
+// Summary
+@import './components/summary/LevelCount';
+@import './components/summary/TimerCount';
+@import './components/summary/AverageWpm';
+@import './components/summary/AverageAccuracy';
+
+// Stats
+@import './components/stats/WpmCounter';
+@import './components/stats/AccuracyChart';
+@import './components/stats/TimeCounter';
+@import './components/stats/TextProgressBar';
+
+// Layout
+@import './layout/display';
+
+// Utils
+@import './utils/colors';
+@import './utils/functions';
+@import './utils/mixins';
+
+

@@ -7,7 +7,7 @@ const GithubLink = ({isDarkMode}) => {
 	return (
 		<a
 			className="github-link"
-			href="https://github.com/BeruzDev/a-typing-game"
+			href="https://github.com/juanmcodes/Typing-game"
 			target="_blank"
 			rel="noopener noreferrer"
 			aria-label="Repositorio en GitHub"
